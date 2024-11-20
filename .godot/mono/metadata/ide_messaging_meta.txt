@@ -1,2 +1,0 @@
-﻿53822
-/Users/soulwax/workspace/3rdParty/godot/Godot.app/Contents/MacOS/Godot

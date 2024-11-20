@@ -4,6 +4,7 @@ public partial class CameraController : Node3D
 {
     [Export] public float MovementSpeed { get; set; } = 5.0f;
     [Export] public float BoostMultiplier { get; set; } = 2.5f;
+    [Export] public float VerticalSpeed { get; set; } = 1.0f;  // New variable for vertical movement speed
     [Export] public float MouseSensitivity { get; set; } = 0.002f;
     [Export] public float PanningSpeed { get; set; } = 0.1f;
     [Export] public float ZoomSpeed { get; set; } = 0.5f;
@@ -34,7 +35,7 @@ public partial class CameraController : Node3D
         Input.MouseMode = Input.MouseModeEnum.Visible;
     }
 
-public override void _UnhandledInput(InputEvent @event)
+    public override void _UnhandledInput(InputEvent @event)
     {
         if (@event is InputEventMouseMotion mouseMotion && Input.IsMouseButtonPressed(MouseButton.Right))
         {
@@ -44,19 +45,19 @@ public override void _UnhandledInput(InputEvent @event)
             {
                 currentRotationSpeed *= FastRotationMultiplier;
             }
-            
+
             // Apply rotation
             _rotationX += mouseMotion.Relative.X * currentRotationSpeed;
             _rotationY += mouseMotion.Relative.Y * currentRotationSpeed;
-            
+
             // Clamp vertical rotation to prevent flipping
-            _rotationY = Mathf.Clamp(_rotationY, -Mathf.Pi/2, Mathf.Pi/2);
-            
+            _rotationY = Mathf.Clamp(_rotationY, -Mathf.Pi / 2, Mathf.Pi / 2);
+
             // Reset and apply rotations in correct order
             Transform3D transform = Transform;
             transform.Basis = Basis.Identity;
             Transform = transform;
-            
+
             // First rotate about Y axis (left/right)
             RotateObjectLocal(Vector3.Up, _rotationX);
             // Then rotate about X axis (up/down)
@@ -179,22 +180,34 @@ public override void _UnhandledInput(InputEvent @event)
         float speed = MovementSpeed * (Input.IsKeyPressed(Key.Shift) ? BoostMultiplier : 1.0f);
         Vector3 direction = Vector3.Zero;
 
-        if (Input.IsActionPressed("ui_up"))
+        // Arrow keys and WASD
+        if (Input.IsActionPressed("ui_up") || Input.IsKeyPressed(Key.W))
             direction -= Transform.Basis.Z;
-        if (Input.IsActionPressed("ui_down"))
+        if (Input.IsActionPressed("ui_down") || Input.IsKeyPressed(Key.S))
             direction += Transform.Basis.Z;
-        if (Input.IsActionPressed("ui_left"))
+        if (Input.IsActionPressed("ui_left") || Input.IsKeyPressed(Key.A))
             direction -= Transform.Basis.X;
-        if (Input.IsActionPressed("ui_right"))
+        if (Input.IsActionPressed("ui_right") || Input.IsKeyPressed(Key.D))
             direction += Transform.Basis.X;
-        if (Input.IsKeyPressed(Key.E))
+
+        // Vertical movement
+        if (Input.IsKeyPressed(Key.Space))
             direction += Vector3.Up;
         if (Input.IsKeyPressed(Key.Q))
             direction += Vector3.Down;
+        if (Input.IsKeyPressed(Key.E))
+            direction += Vector3.Up;
 
-        direction = direction.Normalized();
+        // If moving diagonally, normalize the direction
+        if (direction.Length() > 0)
+        {
+            direction = direction.Normalized();
+        }
+
+        // Apply movement
         Position += direction * speed * (float)delta;
     }
+
 
     private void HandleZoom(double delta)
     {

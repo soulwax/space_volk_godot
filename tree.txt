@@ -4,12 +4,27 @@
 ├── icon.svg
 ├── icon.svg.import
 ├── project.godot
+├── resources
 ├── scenes
-│   ├── CameraController.cs
-│   ├── CameraController.cs.uid
 │   ├── Fog.cs
+│   ├── Fog.cs.uid
 │   ├── Main3d.cs.uid
-│   └── main_3d.tscn
+│   ├── camera
+│   │   ├── CameraController.cs
+│   │   └── CameraController.cs.uid
+│   ├── environment
+│   │   ├── SpaceEnvironment.cs
+│   │   └── SpaceEnvironment.cs.uid
+│   ├── main_3d.tscn
+│   └── space_objects
+│       ├── Debris.cs
+│       ├── Debris.cs.uid
+│       ├── Planet.cs
+│       ├── Planet.cs.uid
+│       ├── Star.cs
+│       └── Star.cs.uid
+├── scripts
+│   └── utils
 └── tree.txt
 
-2 directories, 11 files
+8 directories, 20 files
