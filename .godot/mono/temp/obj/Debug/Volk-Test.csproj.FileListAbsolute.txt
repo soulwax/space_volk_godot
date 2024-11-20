@@ -15,3 +15,4 @@
 /Users/soulwax/workspace/engines/godot/volk-test/.godot/mono/temp/obj/Debug/Volk-Test.pdb
 /Users/soulwax/workspace/engines/godot/volk-test/.godot/mono/temp/obj/Debug/Volk-Test.genruntimeconfig.cache
 /Users/soulwax/workspace/engines/godot/volk-test/.godot/mono/temp/obj/Debug/ref/Volk-Test.dll
+/Users/soulwax/workspace/engines/godot/volk-test/.godot/mono/temp/obj/Debug/Volk-Test.sourcelink.json
