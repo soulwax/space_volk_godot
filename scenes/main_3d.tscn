@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6d4txjat4dii"]
+
+[ext_resource type="Script" uid="uid://joyrr4idyve4" path="res://scenes/environment/SpaceEnvironment.cs" id="1_kefov"]
+[ext_resource type="Script" uid="uid://y84vk7kjfpqp" path="res://scenes/Fog.cs" id="1_m7dbh"]
+[ext_resource type="Script" uid="uid://jnu5f2rv0wog" path="res://scenes/camera/CameraController.cs" id="2_3s264"]
+
+[node name="main_3d" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+script = ExtResource("1_kefov")
+
+[node name="DirectionalLight3D" type="Node3D" parent="Environment"]
+
+[node name="WorldEnvironment" type="Node3D" parent="Environment"]
+
+[node name="FogSystem" type="Node3D" parent="Environment"]
+script = ExtResource("1_m7dbh")
+
+[node name="WorldEnvironment" type="Node3D" parent="Environment/FogSystem"]
+
+[node name="OrientationObjects" type="Node3D" parent="Environment/FogSystem/WorldEnvironment"]
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("2_3s264")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+
+[node name="SpaceObjects" type="Node3D" parent="."]
+
+[node name="Planets" type="Node3D" parent="SpaceObjects"]
+
+[node name="Stars" type="Node3D" parent="SpaceObjects"]
+
+[node name="Debris" type="Node3D" parent="SpaceObjects"]

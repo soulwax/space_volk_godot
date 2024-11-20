@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "CLFFwrLmmSw=",
+  "success": true,
+  "projectFilePath": "/Users/soulwax/workspace/engines/godot/volk-test/Volk-Test.csproj",
+  "expectedPackageFiles": [
+    "/Users/soulwax/.nuget/packages/godot.sourcegenerators/4.4.0-dev/godot.sourcegenerators.4.4.0-dev.nupkg.sha512",
+    "/Users/soulwax/.nuget/packages/godotsharp/4.4.0-dev/godotsharp.4.4.0-dev.nupkg.sha512",
+    "/Users/soulwax/.nuget/packages/godotsharpeditor/4.4.0-dev/godotsharpeditor.4.4.0-dev.nupkg.sha512",
+    "/Users/soulwax/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/soulwax/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

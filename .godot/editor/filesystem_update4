@@ -1,0 +1,9 @@
+res://scenes/Main3d.cs
+res://scenes/main_3d.tscn
+res://scenes/Fog.cs
+res://scenes/CameraController.cs
+res://scenes/environment/SpaceEnvironment.cs
+res://scenes/camera/CameraController.cs
+res://scenes/space_objects/Debris.cs
+res://scenes/space_objects/Planet.cs
+res://scenes/space_objects/Star.cs

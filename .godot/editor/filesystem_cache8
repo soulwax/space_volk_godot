@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1732083654.0
+icon.svg::CompressedTexture2D::7794669648994231511::1732081688::1732081701::1::::<><><>5696b137caeeb4262386d2dddc0dfa77<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+tree.txt::TextFile::-1::1732083218::0::1::::<><><><>::
+::res://resources/::1732083619.0
+::res://scenes/::1732083654.0
+Fog.cs::CSharpScript::1754455582792818531::1732082592::0::1::::<>Node3D<><><>::
+main_3d.tscn::PackedScene::4570263914575531772::1732083663::0::1::::<><><><>::uid://joyrr4idyve4::::res://scenes/SpaceEnvironment.cs<>uid://y84vk7kjfpqp::::res://scenes/Fog.cs<>uid://jnu5f2rv0wog::::res://scenes/camera/CameraController.cs
+SpaceEnvironment.cs::CSharpScript::662089385686647337::1732083346::0::1::::<><><><>::
+::res://scenes/camera/::1732083654.0
+CameraController.cs::CSharpScript::659804722345488434::1732083102::0::1::::<><><><>::
+::res://scenes/environment/::1732083581.0
+::res://scenes/space_objects/::1732083605.0
+::res://scripts/::1732083644.0
+::res://scripts/utils/::1732083644.0
