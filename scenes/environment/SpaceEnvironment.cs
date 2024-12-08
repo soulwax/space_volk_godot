@@ -6,6 +6,10 @@ public partial class SpaceEnvironment : Node3D
     private WorldEnvironment _worldEnvironment;
     private Node3D _fogSystem;
 
+    [Export] public DirectionalLight3D Sun => _sun;
+    [Export] public WorldEnvironment WorldEnvironment => _worldEnvironment;
+    [Export] public Node3D FogSystem => _fogSystem;
+
     public override void _Ready()
     {
         CreateEnvironmentNodes();

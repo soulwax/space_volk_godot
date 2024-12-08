@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6d4txjat4dii"]
+[gd_scene load_steps=7 format=3 uid="uid://b6d4txjat4dii"]
 
 [ext_resource type="Script" uid="uid://joyrr4idyve4" path="res://scenes/environment/SpaceEnvironment.cs" id="1_kefov"]
 [ext_resource type="Script" uid="uid://y84vk7kjfpqp" path="res://scenes/Fog.cs" id="1_m7dbh"]
 [ext_resource type="Script" uid="uid://jnu5f2rv0wog" path="res://scenes/camera/CameraController.cs" id="2_3s264"]
+
+[sub_resource type="Environment" id="Environment_kefov"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_mt54i"]
+
+[sub_resource type="Compositor" id="Compositor_le0cj"]
 
 [node name="main_3d" type="Node3D"]
 
@@ -25,6 +31,9 @@ script = ExtResource("2_3s264")
 
 [node name="Camera3D" type="Camera3D" parent="CameraRig"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+environment = SubResource("Environment_kefov")
+attributes = SubResource("CameraAttributesPractical_mt54i")
+compositor = SubResource("Compositor_le0cj")
 
 [node name="SpaceObjects" type="Node3D" parent="."]
 
